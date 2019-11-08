@@ -6,9 +6,9 @@ const setPosts = ({ commit }) => {
         postsCollection.orderBy('created_at').onSnapshot((snapshot) => {
             var posts = [];
             snapshot.forEach((doc) => {
-                posts.push({
-                    _id: doc.id,
-                })
+                let post = doc.data();
+                post._id = doc.id;
+                posts.push(post);
             });
             commit(types.SET_POSTS, posts);
             resolve(posts);
@@ -18,6 +18,19 @@ const setPosts = ({ commit }) => {
     })
 }
 
+const setPost = ({ commit }, _id) => {
+    return new Promise((resolve, reject) => {
+        postsCollection.doc(_id).get()
+        .then(snapshot => {
+            commit(types.SET_POST, snapshot.data());
+            resolve(snapshot.data());
+        }).catch(error => {
+            reject(error);
+        });
+    })
+}
+
 export default {
-    setPosts
+    setPosts,
+    setPost
 }

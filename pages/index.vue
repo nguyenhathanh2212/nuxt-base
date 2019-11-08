@@ -2,11 +2,7 @@
   <div>
     <!-- Blog entries -->
         <div class="w3-col l8 s12">
-            <post-item-component></post-item-component>
-            <hr>
-            <!-- Blog entry -->
-            <post-item-component></post-item-component>
-            <!-- END BLOG ENTRIES -->
+            <nuxt-child />
         </div>
         <!-- Introduction menu -->
         <div class="w3-col l4">
@@ -22,22 +18,20 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue';
-import PostItem from '@/components/home/PostItem.vue';
-import About from '@/components/home/About.vue';
-import PopularPost from '@/components/home/PopularPost.vue';
-import Tag from '@/components/home/Tag.vue';
+    import Logo from '~/components/Logo.vue';
+    import About from '@/components/home/About.vue';
+    import PopularPost from '@/components/home/PopularPost.vue';
+    import Tag from '@/components/home/Tag.vue';
 
-export default {
-    components: {
-        Logo,
-        postItemComponent: PostItem,
-        aboutComponent: About,
-        popularPostComponent: PopularPost,
-        tagComponent: Tag,
-    },
-    layout: 'master',
-}
+    export default {
+        components: {
+            Logo,
+            aboutComponent: About,
+            popularPostComponent: PopularPost,
+            tagComponent: Tag,
+        },
+        layout: 'master'
+    }
 </script>
 
 <style>

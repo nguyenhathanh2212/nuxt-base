@@ -1,17 +1,6 @@
 const state = () => ({
-    posts: [
-        {
-            id: 1
-        },
-        
-        {
-            id: 2
-        },
-        
-        {
-            id: 3
-        }
-    ]
+    posts: [],
+    post: {},
 });
 
 export default state;

@@ -20,11 +20,12 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: '~/components/Loading.vue',
   /*
   ** Global CSS
   */
   css: [
+    { src: 'font-awesome/css/font-awesome.css', lang: 'css' }
   ],
   /*
   ** Plugins to load before mounting the App

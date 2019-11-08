@@ -1,3 +1,7 @@
+# About nuxt
+- Kế thừa từ vue
+- Bao gồm vue, vue router, vuex, vue server render, vue meta
+
 # `nuxt.config.js`: Config nuxt project với nuxt.config.js
 
 - `build`: 
@@ -23,7 +27,7 @@ Mỗi page component là 1 Vue component nhưng Nuxt.js thêm một sốt thuộ
     - Ko thể gọi this ở hàm này vì nó chưa được khởi tạo.
 - `fetch`: https://nuxtjs.org/api/pages-fetch
     - dùng để fill store trước khi render page component
-    - Tương tự với asyncData ngoại trừ nó không set component data như asyncData (chưa hiểu lắm :(( ).
+    - Tương tự với asyncData ngoại trừ nó không set component data như asyncData (tự động lấy giá trị trả về thêm vào dữ liệu data của commponent).
 
 - `head`: https://nuxtjs.org/api/pages-head
     - Set các thẻ meta trong trang hiện tại

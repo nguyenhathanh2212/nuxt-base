@@ -18,7 +18,7 @@ if (!firebase.apps.length) {
 const db = firebase.firestore();
 
 // collection
-const postsCollection = db.collection('todos');
+const postsCollection = db.collection('posts');
 
 export {
     db,
